@@ -12,7 +12,6 @@ consumer = KafkaConsumer(
     # auto_offset_reset='earliest'
     auto_offset_reset='latest'
 )
-
 print("Consumer started!")
 
 try:

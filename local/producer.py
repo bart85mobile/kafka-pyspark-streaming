@@ -13,9 +13,7 @@ producer = KafkaProducer(
     sasl_plain_password=password,
     api_version_auto_timeout_ms=100000,    
 )
-
 print("Producer started!")
-
 fake = Faker()
 
 while True:
@@ -34,7 +32,7 @@ while True:
     except Exception as e:
         print(f"Error producing message: {e}")
     
-    # Wait 1-3 seconds
+    # Wait a few seconds before sending another message
     time.sleep(randrange(5,8))
 
 producer.close()
